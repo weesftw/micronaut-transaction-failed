@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class DepositHistoryRepository {
 
     private final JdbcTemplate jdbcTemplate;
-    private final String insertQuery = "INSERT INTO DEPOSIT_HISTORY (AMOUNT,ACCOUNT_NUMBER) VALUES(?,?)";
+    private final String insertQuery = "INSERT INTO DEPOSIT_HISTORY VALUES(?,?, CURRENT_TIMESTAMP())";
 
     public DepositHistoryRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -17,8 +17,8 @@ public class DepositHistoryRepository {
     public void makeDepositHistory(Deposit deposit) {
         jdbcTemplate.update(
                 insertQuery,
-                deposit.getAmount(),
-                deposit.getAccountNumber()
+                deposit.getAccountNumber(),
+                deposit.getAmount()
         );
     }
 
