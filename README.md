@@ -10,3 +10,13 @@
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
+## Post para teste:
+
+```bash
+curl --location --request POST 'http://localhost:8080/deposit' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"accountNumber": "0000001",
+"amount": 1.0
+}'
+```

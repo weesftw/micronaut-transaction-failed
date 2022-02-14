@@ -22,9 +22,6 @@ public class DepositService {
     @Transactional(rollbackFor = Throwable.class)
     public void makeDeposit(Deposit deposit) {
         depositRepository.makeDeposit(deposit);
-        if (1 == 1) {
-            throw new RuntimeException();
-        }
         depositHistoryRepository.makeDepositHistory(deposit);
     }
 

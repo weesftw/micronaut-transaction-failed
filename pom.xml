@@ -132,13 +132,11 @@
                             <artifactId>micronaut-http-validation</artifactId>
                             <version>${micronaut.version}</version>
                         </path>
-                        <!-- Removing this comment works!
                         <path>
                             <groupId>io.micronaut.spring</groupId>
                             <artifactId>micronaut-spring-annotation</artifactId>
                             <version>${micronaut.spring.version}</version>
                         </path>
-                        -->
                     </annotationProcessorPaths>
                     <compilerArgs>
                         <arg>-Amicronaut.processing.group=my.transaction.app</arg>
