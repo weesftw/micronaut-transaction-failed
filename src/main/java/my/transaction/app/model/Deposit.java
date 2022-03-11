@@ -1,7 +1,10 @@
 package my.transaction.app.model;
 
+import io.micronaut.core.annotation.Introspected;
+
 import java.math.BigDecimal;
 
+@Introspected
 public class Deposit {
     private String accountNumber;
     private BigDecimal amount;

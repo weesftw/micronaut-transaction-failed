@@ -14,8 +14,6 @@ datasources:
     driverClassName: ${JDBC_DRIVER:org.h2.Driver}
 
 flyway:
-  locations: filesystem:SQL/schema/migration
-  user: ${datasources.default.username}
-  password: ${datasources.default.password}
-  schemas: testdb
-  url: ${datasources.default.url}
+  datasources:
+    default:
+      enabled: true

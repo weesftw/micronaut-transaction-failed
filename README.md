@@ -10,7 +10,7 @@
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
-## Post para teste:
+## Post:
 
 ```bash
 curl --location --request POST 'http://localhost:8080/deposit' \
@@ -20,3 +20,8 @@ curl --location --request POST 'http://localhost:8080/deposit' \
 "amount": 1.0
 }'
 ```
+
+
+### H2 Console
+
+http://localhost:8082
