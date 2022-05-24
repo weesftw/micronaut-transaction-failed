@@ -1,9 +1,8 @@
 package my.transaction.app.workflow.definition;
 
-import my.transaction.app.workflow.definition.ActivityItem;
-import org.springframework.transaction.annotation.Transactional;
+import my.transaction.app.InheritedTransactional;
 
-@Transactional(rollbackFor = Throwable.class)
+@InheritedTransactional
 public class TransactionalActityItem<INPUT, OUTPUT> {
 
     private ActivityItem<INPUT, OUTPUT> delegate;
