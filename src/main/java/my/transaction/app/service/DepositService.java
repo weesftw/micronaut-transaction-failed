@@ -21,6 +21,8 @@ public class DepositService {
 
     public Void makeDeposit(Deposit deposit) {
         depositRepository.makeDeposit(deposit);
+        if(true)
+            throw new RuntimeException("error");
         depositHistoryRepository.makeDepositHistory(deposit);
         return null;
     }
