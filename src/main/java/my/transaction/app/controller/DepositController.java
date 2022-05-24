@@ -5,21 +5,21 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Post;
 import jakarta.inject.Inject;
 import my.transaction.app.model.Deposit;
-import my.transaction.app.service.DepositService;
+import my.transaction.app.workflow.definition.TransactionalActityItem;
 
 @Controller("/deposit")
 public class DepositController {
 
-    private final DepositService depositService;
+    private final TransactionalActityItem activityMakeDeposity;
 
     @Inject
-    public DepositController(DepositService depositService) {
-        this.depositService = depositService;
+    public DepositController(TransactionalActityItem activityMakeDeposity) {
+        this.activityMakeDeposity = activityMakeDeposity;
     }
 
     @Post
     public void deposit(@Body Deposit deposit) {
-        depositService.makeDeposit(deposit);
+        activityMakeDeposity.execute(deposit);
     }
 
 }

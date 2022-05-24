@@ -19,10 +19,10 @@ public class DepositService {
         this.depositRepository = depositRepository;
     }
 
-    @Transactional(rollbackFor = Throwable.class)
-    public void makeDeposit(Deposit deposit) {
+    public Void makeDeposit(Deposit deposit) {
         depositRepository.makeDeposit(deposit);
         depositHistoryRepository.makeDepositHistory(deposit);
+        return null;
     }
 
 }
