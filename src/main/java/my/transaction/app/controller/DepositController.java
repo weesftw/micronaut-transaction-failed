@@ -10,10 +10,10 @@ import my.transaction.app.workflow.definition.TransactionalActityItem;
 @Controller("/deposit")
 public class DepositController {
 
-    private final TransactionalActityItem activityMakeDeposity;
+    private final TransactionalActityItem<Deposit, Void> activityMakeDeposity;
 
     @Inject
-    public DepositController(TransactionalActityItem activityMakeDeposity) {
+    public DepositController(TransactionalActityItem<Deposit, Void> activityMakeDeposity) {
         this.activityMakeDeposity = activityMakeDeposity;
     }
 
