@@ -1,8 +1,5 @@
 package my.transaction.app.workflow.definition;
 
-import my.transaction.app.InheritedTransactional;
-
-@InheritedTransactional
 public class TransactionalActityItem<INPUT, OUTPUT> {
 
     private ActivityItem<INPUT, OUTPUT> delegate;
